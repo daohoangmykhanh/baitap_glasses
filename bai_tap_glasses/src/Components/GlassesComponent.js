@@ -9,6 +9,7 @@ import v6 from '../glassesImage/v6.png'
 import v7 from '../glassesImage/v7.png'
 import v8 from '../glassesImage/v8.png'
 import v9 from '../glassesImage/v9.png'
+import background from '../glassesImage/background.jpg' 
 
 
 
@@ -32,8 +33,8 @@ export default class GlassesComponent extends Component {
 
     render() {
         return (
-            <div>
-                <div className="header">
+            <div class="background" style={{  backgroundImage: `url(${background})` }} >
+                <div className="header" >
                     <h1> TRY GLASSES APP ONLINE</h1>
                 </div>
                 <div className="content__container container">
@@ -51,7 +52,7 @@ export default class GlassesComponent extends Component {
                         <div className="content__item">
                             <img src={model} />
                             <img className="glasses" style={{display: `${this.state.display}`}} src={this.state.imgSrc}/>
-                            <div className="content__detail">
+                            <div className="content__detail" style={{display: `${this.state.display}`}}>
                                 <h1 > {this.state.brand} </h1>
                                 <p> {this.state.detail} </p>
                             </div>
