@@ -26,6 +26,11 @@
 .content__detail h1{
     font-size: 1.8rem;
     color:blueviolet;
+    margin:0 0.5rem;
+}
+
+.content__detail p{
+    margin: 0 0.7rem;
 }
 
 .content__item{
@@ -38,7 +43,6 @@
     left: 0;
     width: 100%;
     background-color: rgba(255,99,71,0.7);
-    padding: 0.2rem 0.5rem;
     color:white;
     font-weight: 500;
 }
@@ -70,7 +74,7 @@
 
 .content__item .glasses{
     position: absolute;
-    top: 7.2rem;
+    top: 7.1rem;
     left: 5.4rem;
     height: 4.2rem;
     width: 12.2rem;

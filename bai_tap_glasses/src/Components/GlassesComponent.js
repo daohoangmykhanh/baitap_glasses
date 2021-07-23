@@ -15,12 +15,17 @@ import v9 from '../glassesImage/v9.png'
 export default class GlassesComponent extends Component {
 
     state = {
-        imgSrc: ``,
+        imgSrc:'',
+        brand: '',
+        display: 'none',
     }
 
-    changeColor = (color) => {
+    changeColor = (color,name) => {
         this.setState({
-            imgSrc: `${color}`
+            imgSrc: `${color}`,
+            brand: `${name}`,
+            detail:  `Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. `,
+            display: 'initial',
         })
 
     }
@@ -35,7 +40,7 @@ export default class GlassesComponent extends Component {
                     <div className="content__list">
                         <div className="content__item">
                             <img src={model} />
-                            <img className="glasses" src={v7}/>
+                            <img  className="glasses" src={v7}/>
                             <div className="content__detail">
                                 <h1> FENDI F8750 </h1>
                                 <p> Light pink square lenses define these sunglasses, ending with amother of pearl effect tip.  </p>
@@ -45,40 +50,40 @@ export default class GlassesComponent extends Component {
                     <div className="content__list">
                         <div className="content__item">
                             <img src={model} />
-                            <img className="glasses" src={this.state.imgSrc}/>
+                            <img className="glasses" style={{display: `${this.state.display}`}} src={this.state.imgSrc}/>
                             <div className="content__detail">
-                                <h1 > FENDI F8750 </h1>
-                                <p> Light pink square lenses define these sunglasses, ending with amother of pearl effect tip.  </p>
+                                <h1 > {this.state.brand} </h1>
+                                <p> {this.state.detail} </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="button__container container">
-                    <button onClick = {()=>{this.changeColor(v1)}}>
+                    <button onClick = {()=>{this.changeColor(v1,'GUCCI G8850U')}}>
                         <img src={v1}/>
                     </button>
-                    <button onClick = {()=>{this.changeColor(v2)}}>
+                    <button onClick = {()=>{this.changeColor(v2,'GUCCI G8759H')}}>
                         <img src={v2}/>
                     </button>
-                    <button onClick = {()=>{this.changeColor(v3)}}>
+                    <button onClick = {()=>{this.changeColor(v3,'DIOR D6700HQ')}}>
                         <img src={v3}/>
                     </button>
-                    <button onClick = {()=>{this.changeColor(v4)}}>
+                    <button onClick = {()=>{this.changeColor(v4,'DIOR D6005U')}}>
                         <img src={v4}/>
                     </button>
-                    <button onClick = {()=>{this.changeColor(v5)}}>
+                    <button onClick = {()=>{this.changeColor(v5,'PRADA P8750')}}>
                         <img src={v5}/>
                     </button>
-                    <button onClick = {()=>{this.changeColor(v6)}}>
+                    <button onClick = {()=>{this.changeColor(v6,'PRADA P9700')}}>
                         <img src={v6}/>
                     </button>
-                    <button onClick = {()=>{this.changeColor(v7)}}>
+                    <button onClick = {()=>{this.changeColor(v7,'FENDI F8750')}}>
                         <img src={v7}/>
                     </button>
-                    <button onClick = {()=>{this.changeColor(v8)}}>
+                    <button onClick = {()=>{this.changeColor(v8,'FENDI F8500')}}>
                         <img src={v8}/>
                     </button>
-                    <button onClick = {()=>{this.changeColor(v9)}}>
+                    <button onClick = {()=>{this.changeColor(v9,'FENDI F4300')}}>
                         <img src={v9}/>
                     </button>
                 </div>
