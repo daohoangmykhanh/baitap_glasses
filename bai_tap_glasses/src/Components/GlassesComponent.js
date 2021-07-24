@@ -40,8 +40,8 @@ export default class GlassesComponent extends Component {
                 <div className="content__container container">
                     <div className="content__list">
                         <div className="content__item">
-                            <img src={model} />
-                            <img  className="glasses" src={v7}/>
+                            <img src={model} alt="model" />
+                            <img  className="glasses" src={v7} alt="glasses"/>
                             <div className="content__detail">
                                 <h1> FENDI F8750 </h1>
                                 <p> Light pink square lenses define these sunglasses, ending with amother of pearl effect tip.  </p>
@@ -50,8 +50,8 @@ export default class GlassesComponent extends Component {
                     </div>
                     <div className="content__list">
                         <div className="content__item">
-                            <img src={model} />
-                            <img className="glasses" style={{display: `${this.state.display}`}} src={this.state.imgSrc}/>
+                            <img src={model} alt="model" />
+                            <img className="glasses" style={{display: `${this.state.display}`}} src={this.state.imgSrc} alt="glasses"/>
                             <div className="content__detail" style={{display: `${this.state.display}`}}>
                                 <h1 > {this.state.brand} </h1>
                                 <p> {this.state.detail} </p>
